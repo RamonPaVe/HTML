@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.3 - numero major</title>
+    </head>
+    <body>
+        <script>
+            var num1=prompt("Escriu un numero:");
+            var num2=prompt("Escriu un altre numero:");
+            var num3=prompt("Escriu un ultim numero:");
+            alert(calcula(num1,num2,num3));
+            function calcula(a,b,c){
+                var major;
+                if (a>b) {
+                    if (a>c){
+                        major= a + " es el numero mes gran";
+                    } 
+                }
+                else if (b>c) {
+                            major= b + " es el numero mes gran";
+                        }
+                        else {major= c + " es el numero mes gran";
+                        }
+                return major;
+            }
+        </script>
+        <br>
+    </body>
+</html>

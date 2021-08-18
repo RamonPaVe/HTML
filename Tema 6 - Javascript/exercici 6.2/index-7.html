@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.2 - Cercle</title>
+    </head>
+    <body>
+        <script>
+            function calcula(){
+                var radi = parseFloat(document.getElementsByName("radi")[0].value);
+                var diametro = parseFloat(2*radi);
+                var circunferencia =parseFloat(2*Math.PI*radi);
+                var area =parseFloat(radi*radi*Math.PI);
+                document.getElementById("paragraf1").innerHTML ="El diametre es " + diametro +".";
+                document.getElementById("paragraf2").innerHTML ="La circunferencia " + circunferencia +".";
+                document.getElementById("paragraf3").innerHTML ="L'area es " + area +".";
+            }
+        </script>
+        <form action="">
+            <fieldset>
+                <legend>Indica el radi d'un cercle</legend>
+                <br>
+                <label for="radi">radi:</label>
+                <input type="text" id="radi" name="radi" size="10"><br><br>
+                <button type="button" onclick="calcula()">Calcula</button>
+            </fieldset>  
+        </form>
+        <br>
+        <p id="paragraf1"></p>
+        <p id="paragraf2"></p>
+        <p id="paragraf3"></p>
+    </body>
+</html>

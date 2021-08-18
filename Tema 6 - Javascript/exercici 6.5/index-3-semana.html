@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.5.3 - semana</title>
+    </head>
+    <body>
+        <label for="numero">Disme un numero del 0 al 6:</label>
+        <input type="text" id="numero" name="numero" size="5">
+        <button type="button" onclick="validanumero()">Acceptar</button>
+        <script>
+            function escriuDiaSetmana(){
+                var dia;
+                var diaEscrit;
+                dia = parseInt(document.getElementById("numero").value);   
+                switch (dia){
+                    case 0:
+                        diaEscrit = "Diumenge";
+                        break;
+                    case 1:
+                        diaEscrit = "Dilluns";
+                        break;
+                    case 2:
+                        diaEscrit = "Dimarts";                        
+                        break;
+                    case 3:
+                        diaEscrit = "Dimecres";                        
+                        break;
+                    case 4:
+                        diaEscrit = "Dijous";                        
+                        break;
+                    case 5:
+                        diaEscrit = "Divendres";                        
+                        break;
+                    case 6:
+                        diaEscrit = "Dissabte";                        
+                        break;
+                }
+                window.alert(diaEscrit);
+            }
+            function validanumero() {
+                var n;
+                n = parseInt(document.getElementById("numero").value);
+                if (isNaN(n) || n < 0 || n > 6) {
+                    window.alert("El numero ha de estar compres entre el 0 i el 6");
+                } else {
+                    escriuDiaSetmana();
+                }
+            }
+        </script>
+    </body>
+</html>

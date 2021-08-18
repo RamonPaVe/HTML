@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.4 - Masa Corporal 2.0</title>
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Calcular Masa Corporal</legend>
+                <br>
+                <label for="altura">Altura (en metres):</label>
+                <input type="text" id="altura" name="altura" size="10">
+                <p id="alt"></p>
+                <label for="pes">Pes (en Kg):</label>
+                <input type="text" id="pes" name="pes" size="10">
+                <p id="peso"></p>
+                <button type="button" onclick="validaAlturaPes()">Calcula IMC</button>
+            </fieldset>  
+        </form>
+        <br>
+        <p id="paragraf1"></p>
+        <p id="paragraf2"></p>
+        <script>
+            function calcula(){
+                var altura = parseFloat(document.getElementsByName("altura")[0].value);
+                var pes = parseFloat(document.getElementsByName("pes")[0].value);
+                var resultat =parseFloat(pes/(altura*altura));
+                var resultat2;
+                if (resultat>=30){
+                    resultat2= "Obes";
+                } else if (resultat >= 25 && resultat < 30){
+                    resultat2="Sobrepes";
+                } else if (resultat>= 18.5 && resultat <25){
+                    resultat2="Normal";
+                } else { 
+                    resultat2= "Baix Pes";
+                }
+                document.getElementById("paragraf1").innerHTML ="El teu IMC es " + resultat +".";
+                document.getElementById("paragraf2").innerHTML ="La teua clasificacio de IMC es: " + resultat2 +".";
+            }
+            function validaAlturaPes() {
+                var a, p, altOK, pesOK;
+                a = parseFloat(document.getElementById("altura").value);
+                document.getElementById("alt").innerHTML ="";
+                document.getElementById("peso").innerHTML ="";
+                if (isNaN(a) || a < 0.5 || a > 2.5) {
+                    document.getElementById("alt").innerHTML = "L'altura deu estar compresa entre 0.5 i 2.5";
+                } else {
+                    altOK=true;
+                }
+                p = parseFloat(document.getElementById("pes").value);
+                if (isNaN(p) || p < 20 || p > 300) {
+                    document.getElementById("peso").innerHTML = "El pes deu estar compresa entre 20 i 300";
+                } else {
+                    pesOK=true;
+                }
+                if (altOK==true && pesOK==true){calcula()}
+            }
+        </script>
+    </body>
+</html>

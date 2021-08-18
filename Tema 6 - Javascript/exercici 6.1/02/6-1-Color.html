@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.1 - Canvi de color</title>
+    </head>
+    <body>
+        <p id="paragraf1">Este pàragraf va a canviar de color</p>
+        <br>
+        <button onclick="roig()">Roig</button>
+        <button onclick="verd()">Verd</button>
+        <button onclick="blau()">Blau</button>
+        <script>
+            function roig(){
+                document.getElementById('paragraf1').style.color="red";
+            }
+            function verd(){
+                document.getElementById('paragraf1').style.color="green";
+            }
+            function blau(){
+                document.getElementById('paragraf1').style.color="blue";
+            }
+        </script>
+    </body>
+</html>

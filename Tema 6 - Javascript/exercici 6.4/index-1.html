@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.4 - Paraules Iguals</title>
+    </head>
+    <body>
+
+        <script>
+            function paraules(){
+                var resultat;
+                var paraula1 = document.getElementById("par1").value;
+                var paraula2 = document.getElementById("par2").value;
+                if (paraula1==paraula2) {
+                     resultat= "Les paraules son exactament iguals"
+                    }
+                else if (paraula1.toUpperCase()==paraula2.toUpperCase()){
+                    resultat= "Les paraules son iguals (no coincideixen majuscules i minuscules)";
+                }
+                else {resultat= "Les paraules son diferents";}
+                document.getElementById("paragraf").innerHTML = resultat;
+            }
+            function validar() {
+                var x = document.forms["fpar"]["par1"].value;
+                var y = document.forms["fpar"]["par2"].value;
+                if (x == "" || y == "") {
+                    alert("Deus posar alguna paraula");
+                    return false;
+                }
+                else {paraules()}
+            }
+        </script>
+        <form name="fpar" action="" method="post">
+            <fieldset>
+                <legend>Escriu 2 paraules</legend>
+                <input type="text" id="par1" name="par1" size="50"><br><br>
+                <input type="text" id="par2" name="par2" size="50"><br><br>
+                <input type="button" value="Submit" onclick="return validar()">
+            </fieldset>
+        </form>
+        <br>
+        <p id="paragraf"></p>
+    </body>
+</html>

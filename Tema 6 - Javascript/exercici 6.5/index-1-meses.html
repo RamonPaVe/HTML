@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.5.1 - Switch-Case / Meses</title>
+    </head>
+    <body>
+        <label for="mes">Disme un numero entre el 1 i el 12:</label>
+        <input type="text" id="mes" name="mes" size="5">
+        <button type="button" onclick="diguesMes()">Acceptar</button>
+        <script>
+            function diguesMes(){
+                var mesNumero;
+                var mesLletra;
+                
+                mesNumero = document.getElementById("mes").value;
+                
+                switch (mesNumero){
+                    case "1":
+                        mesLletra="Gener";
+                        break;
+                    case "2":
+                        mesLletra="Febrer";
+                        break;
+                    case "3":
+                        mesLletra="Març";
+                        break;
+                    case "4":
+                        mesLletra="Abril";
+                        break;
+                    case "5":
+                        mesLletra="Maig";
+                        break;
+                    case "6":
+                        mesLletra="Juny";
+                        break;
+                    case "7":
+                        mesLletra="Juliol";
+                        break;
+                    case "8":
+                        mesLletra="Agost";
+                        break;
+                    case "9":
+                        mesLletra="Setembre";
+                        break;
+                    case "10":
+                        mesLletra="Octubre";
+                        break;
+                    case "11":
+                        mesLletra="Novembre";
+                        break;
+                    case "12":
+                        mesLletra="Decembre";
+                        break;
+                    default:
+                        mesLletra="Valor incorrecte";
+                }
+                window.alert(mesLletra);
+            }
+        </script>
+    </body>
+</html>

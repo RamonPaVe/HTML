@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.3 - Cilindre</title>
+    </head>
+    <body>
+        <br>
+        <p id="paragraf1"></p>
+        <p id="paragraf2"></p>
+        <p id="paragraf3"></p>
+        <p id="paragraf4"></p>
+        <p id="paragraf5"></p>
+        <script>
+            var perimetroBase;
+            var areaBase;
+            var areaLateral;
+            var areaCilindro;
+            var volumen;
+            var radi=parseInt(prompt("Indicam el radi de la base del clindre:"));
+            var altura=parseInt(prompt("dis-me l'altura del clindre:"));
+
+            perimetroBase=calculaPerimetroBase(radi);
+            areaBase=calculaAreaBase(radi);
+            areaLateral=calculaAreaLateral(perimetroBase,altura);
+            areaCilindro=calculaAreaCilindro(areaBase, areaLateral);
+            volumen=calculaVolumen(areaBase,altura);
+
+            document.getElementById("paragraf1").innerHTML ="El perimetro de labase es " + perimetroBase +".";
+            document.getElementById("paragraf2").innerHTML ="L'area de la base es " + areaBase +".";
+            document.getElementById("paragraf3").innerHTML ="L'area lateral es " + areaLateral +".";
+            document.getElementById("paragraf4").innerHTML ="L'area del cilindre es " + areaCilindro +".";
+            document.getElementById("paragraf5").innerHTML ="El volumen del cilindre es " + volumen +".";        
+            
+            function calculaPerimetroBase(r){
+                return parseInt(2*Math.PI*r);
+            }
+            function calculaAreaBase(r){
+                return parseInt(r*r*Math.PI);
+            }
+            function calculaAreaLateral(pb,h){
+                return parseInt(pb*h);
+            }
+            function calculaAreaCilindro(ab,al){
+                return parseInt((ab*2)+al);
+            }
+            function calculaVolumen(ab,h){
+                return parseInt(ab*h);
+            }
+        </script>
+    </body>
+</html>

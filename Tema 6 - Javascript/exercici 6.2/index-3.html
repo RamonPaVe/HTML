@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.2 - (a+b)/c</title>
+    </head>
+    <body>
+        <script>
+            function calcula(){
+                var a = parseInt(document.getElementsByName("num1")[0].value);
+                var b = parseInt(document.getElementsByName("num2")[0].value);
+                var c = parseInt(document.getElementsByName("num3")[0].value);
+                var resultat =parseFloat((a+b)/c);
+                document.getElementById("paragraf").innerHTML ="El resultat es " + resultat +".";
+            }
+        </script>
+        <form action="">
+            <fieldset>
+                <legend>Escriu 3 numeros</legend>
+                <br>
+                <label for="num1">Numero a:</label>
+                <input type="text" id="num1" name="num1" size="10"><br><br>
+                <label for="num2">Numero b:</label>
+                <input type="text" id="num2" name="num2" size="10"><br><br>
+                <label for="num3">Numero c:</label>
+                <input type="text" id="num3" name="num3" size="10"><br><br>
+                <button type="button" onclick="calcula()">Calcula (a+b)/c</button>
+            </fieldset>  
+        </form>
+        <br>
+        <p id="paragraf"></p>
+    </body>
+</html>

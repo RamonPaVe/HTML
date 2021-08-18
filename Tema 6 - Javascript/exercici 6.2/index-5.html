@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.2 - Masa Corporal</title>
+    </head>
+    <body>
+        <script>
+            function calcula(){
+                var altura = parseFloat(document.getElementsByName("altura")[0].value);
+                var pes = parseFloat(document.getElementsByName("pes")[0].value);
+                var resultat =parseFloat(pes/(altura*altura));
+                document.getElementById("paragraf").innerHTML ="El IMC es " + resultat +".";
+            }
+        </script>
+        <form action="">
+            <fieldset>
+                <legend>Calcular Masa Corporal</legend>
+                <br>
+                <label for="altura">Altura (en metres):</label>
+                <input type="text" id="altura" name="altura" size="10"><br><br>
+                <label for="pes">Pes (en Kg):</label>
+                <input type="text" id="pes" name="pes" size="10"><br><br>
+                <button type="button" onclick="calcula()">Calcula IMC</button>
+            </fieldset>  
+        </form>
+        <br>
+        <p id="paragraf"></p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.5.4 - Switch-Case / Buscar</title>
+    </head>
+    <body>
+        <label for="buscador">Disme un buscador(Google, Yahoo, Bing o DuckDuckGo)</label>
+        <input type="text" id="buscador" name="buscador" size="15">
+        <br>
+        <label for="buscar">Disme que vols buscar:</label>
+        <input type="text" id="buscar" name="buscar" size="25">
+        <br>
+        <button type="button" onclick="obriBuscador()">Acceptar</button>
+        <script>
+            function obriBuscador(){
+                var buscador;
+                var busqueda;
+                buscador = document.getElementById("buscador").value;   
+                buscar = document.getElementById("buscar").value;
+                switch (buscador.toLowerCase()){
+                    case "google":
+                        window.location.href = "https://www.google.es/search?q="+buscar;
+                        break;
+                    case "yahoo":
+                        window.location.href = "https://es.search.yahoo.com/search?p="+buscar;
+                        break;
+                    case "bing":
+                        window.location.href = "https://www.bing.com/search?q="+buscar;
+                        break;
+                    case "duckduckgo":
+                        window.location.href = "https://duckduckgo.com/?q="+buscar;
+                        break;
+                    default:
+                        window.alert("Nom de buscador incorrecte");
+                }
+            }
+        </script>
+    </body>
+</html>

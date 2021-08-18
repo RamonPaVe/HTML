@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.2 - HH:MM:SS</title>
+    </head>
+    <body>
+        <script>
+            function calcula(){
+                var cantitat = parseInt(document.getElementsByName("num1")[0].value);
+                var HH = parseInt(cantitat/3600);
+                var res= parseInt(cantitat%3600);
+                var MM = parseInt(res/60);
+                var SS= parseInt(res%60);
+                document.getElementById("paragraf").innerHTML =HH +"h:"+ MM +"m:"+ SS+"s";
+            }
+        </script>
+        <form action="">
+            <fieldset>
+                <legend>Calcular Masa Corporal</legend>
+                <br>
+                <label for="num1">Escriu una cantitat per a pasar a HH:MM:SS:</label>
+                <input type="text" id="num1" name="num1" size="10"><br><br>
+                <button type="button" onclick="calcula()">Calcula</button>
+            </fieldset>  
+        </form>
+        <br>
+        <p id="paragraf"></p>
+    </body>
+</html>

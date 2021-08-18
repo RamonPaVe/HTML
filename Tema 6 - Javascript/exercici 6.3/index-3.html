@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.3 - Preu article</title>
+    </head>
+    <body>
+        <script>
+            var preuAmbDesc;
+            var preuAmbIVA;
+            var preu=prompt("Indicam el preu de l'article:");
+            var desc=prompt("dis-me un percentatje de descompte:");
+            var iva=prompt("Indicam l'IVA (4%, 10%, 21%):");
+
+            preuAmbDesc=calculaDescompte(preu,desc);
+            preuAmbIVA=preuTotal(preuAmbDesc,iva);
+            
+            alert("El Preu final de l'article es: "+preuAmbIVA);
+
+            function calculaDescompte(p,d){
+                 return parseFloat(p-(p*d/100));    
+            }
+
+            function preuTotal(p,i){ 
+                return parseFloat(p+(p*i/100));
+            }
+        </script>
+        <br>
+    </body>
+</html>

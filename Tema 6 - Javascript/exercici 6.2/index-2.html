@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.2 - operacions</title>
+    </head>
+    <body>
+        <script>
+            function suma(){
+                var num1 = parseInt(document.getElementsByName("num1")[0].value);
+                var num2 = parseInt(document.getElementsByName("num2")[0].value);
+                var resultat =num1+num2;
+                document.getElementById("paragraf").innerHTML ="El resultat es " + resultat +".";
+            }
+            function resta(){
+                var num1 = parseInt(document.getElementsByName("num1")[0].value);
+                var num2 = parseInt(document.getElementsByName("num2")[0].value);
+                var resultat =num1-num2;
+                document.getElementById("paragraf").innerHTML ="El resultat es " + resultat +".";
+            }
+            function divideix(){
+                var num1 = parseInt(document.getElementsByName("num1")[0].value);
+                var num2 = parseInt(document.getElementsByName("num2")[0].value);
+                var resultat =parseFloat(num1/num2);
+                document.getElementById("paragraf").innerHTML ="El resultat es " + resultat +".";
+            }
+            function multiplica(){
+                var num1 = parseInt(document.getElementsByName("num1")[0].value);
+                var num2 = parseInt(document.getElementsByName("num2")[0].value);
+                var resultat =num1*num2;
+                document.getElementById("paragraf").innerHTML ="El resultat es " + resultat +".";
+            }
+            function resto(){
+                var num1 = parseInt(document.getElementsByName("num1")[0].value);
+                var num2 = parseInt(document.getElementsByName("num2")[0].value);
+                var resultat =num1%num2;
+                document.getElementById("paragraf").innerHTML ="El resultat es " + resultat +".";
+            }
+        </script>
+        <form action="">
+            <fieldset>
+                <legend>Escriu 2 numeros</legend>
+                <br>
+                <label for="num1">Numero 1:</label>
+                <input type="text" id="num1" name="num1" size="10"><br><br>
+                <label for="num2">Numero 2:</label>
+                <input type="text" id="num2" name="num2" size="10"><br><br>
+                <button type="button" onclick="suma()">Suma</button>
+                <button type="button" onclick="resta()">Resta</button>
+                <button type="button" onclick="divideix()">Divideix</button>
+                <button type="button" onclick="multiplica()">Multiplica</button>
+                <button type="button" onclick="resto()">Resto</button>
+            </fieldset>  
+        </form>
+        <br>
+        <p id="paragraf"></p>
+    </body>
+</html>

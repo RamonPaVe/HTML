@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.4 - Notes</title>
+    </head>
+    <body>
+        <label for="nota">Disme la nota:</label>
+        <input type="text" id="nota" name="nota" size="5">
+        <p id="n"></p>
+        <button type="button" onclick="validaNota()">Calificam</button>
+        <script>
+            function calcula(){
+                var nota = parseFloat(document.getElementsByName("nota")[0].value);
+                if (nota>=9 && nota <=10){
+                    alert("Calificacio: Excel·lent.");
+                } else if (nota>=7 && nota <9){
+                    alert("Calificacio: Notable.");
+                } else if (nota>=6 && nota <7){
+                    alert("Calificacio: Be.");
+                } else if (nota>=5 && nota <6){
+                    alert("Calificacio: Suficient.");
+                } else { 
+                    alert("Calificacio: Insuficient.");
+                }
+            }
+            function validaNota() {
+                var n;
+                n = parseFloat(document.getElementById("nota").value);
+                document.getElementById("n").innerHTML ="";
+                if (isNaN(n) || n < 0 || n > 10) {
+                    document.getElementById("n").innerHTML = "La nota deu estar compresa entre 0 i 10";
+                } else {
+                    calcula();
+                }
+            }
+        </script>
+    </body>
+</html>

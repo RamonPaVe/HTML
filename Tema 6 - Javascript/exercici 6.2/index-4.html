@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.2 - Concatena</title>
+    </head>
+    <body>
+        <script>
+            function concatena(){
+                var a = document.getElementsByName("par1")[0].value;
+                var b = document.getElementsByName("par2")[0].value;
+                var c = document.getElementsByName("par3")[0].value;
+                var resultat =a + " " + b +" " + c;
+                document.getElementById("paragraf").innerHTML =resultat;
+            }
+        </script>
+        <form action="">
+            <fieldset>
+                <legend>Escriu 3 paraules</legend>
+                <br>
+                <label for="par1">Paraula 1:</label>
+                <input type="text" id="par1" name="par1" size="10"><br><br>
+                <label for="par2">Paraula 2:</label>
+                <input type="text" id="par2" name="par2" size="10"><br><br>
+                <label for="par3">Paraula 3:</label>
+                <input type="text" id="par3" name="par3" size="10"><br><br>
+                <button type="button" onclick="concatena()">Concatena</button>
+            </fieldset>  
+        </form>
+        <br>
+        <p id="paragraf"></p>
+    </body>
+</html>

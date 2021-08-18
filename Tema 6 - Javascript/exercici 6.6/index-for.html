@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercici 6.6.2 - For</title>
+    </head>
+    <body>
+        <label for="numero">Disme un numero positiu:</label>
+        <input type="text" id="numero" name="numero" size="5">
+        <p id="n"></p>
+        <button type="button" onclick="validanumero()">Acceptar</button>
+        <script>
+            function escriuNum(){
+                var numero;
+                var i;
+                i=0;
+                numero = parseFloat(document.getElementById("numero").value);
+                for(i = 0; i <= numero; i++) {
+                    console.log("Numero "+ i);
+                }
+
+            }
+            function validanumero() {
+                var n;
+                n = parseFloat(document.getElementById("numero").value);
+                document.getElementById("n").innerHTML ="";
+                if (isNaN(n) || n < 0) {
+                    document.getElementById("n").innerHTML = "El numero ha de ser positiu";
+                } else {
+                    escriuNum();
+                }
+            }
+        </script>
+    </body>
+</html>
